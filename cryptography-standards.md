@@ -1,3 +1,4 @@
+# Cryptographic Attacks
 
 1. Purpose
 This document provides detailed standards and implementation guidance to support the organization’s Cryptography Policy. It defines how cryptographic controls must be applied in practice to ensure secure, consistent, and compliant implementations across systems and applications.
