@@ -1,30 +1,22 @@
-## Microsoft Cyber Security Architect
-
-SC100
+# Microsoft Security Architect
 
 ## What this role will do?
 
-This role is pivotal because it moves beyond just " managing tools " to  designing a cohesive ecosystem  that treats security as a business enabler rather than a roadblock.
+- This role is pivotal because it moves beyond just " managing tools " to  designing a cohesive ecosystem  that treats security as a business enabler rather than a roadblock.
+- To fulfill this role effectively, you essentially act as the  bridge  between  high-level business risk  and  low-level technical implementation.
+- In this role, your  design philosophy  is anchored by the  Microsoft Cybersecurity Reference Architectures (MCRA). This framework outlines how  Microsoft security capabilities integrate  with  each other  and with third-party platforms.
+- This role is unique because it demands both  "big picture" strategic thinking  and  deep technical fluency  across the entire  Microsoft security stack .
 
-To fulfill this role effectively, you essentially act as the  bridge  between  high-level business risk  and  low-level technical implementation .
-
-In this role, your  design philosophy  is anchored by the  Microsoft Cybersecurity Reference Architectures (MCRA) . 
-
-This framework outlines how  Microsoft security capabilities integrate  with  each other  and with third-party platforms.
-
-This role is unique because it demands both  "big picture" strategic thinking  and  deep technical fluency  across the entire  Microsoft security stack .
-
-## What this role will do?
+## How this role will do it
 
 To succeed in this capacity—and on the exam—you must shift from being a " builder " to being a " designer ." You aren't just configuring a firewall; you are defining  how  that firewall  interacts  with identity signals, device health, and data sensitivity labels to create a cohesive defense.
 
 As an architect, his work follows a lifecycle that bridges the gap between executive goals and engineering reality.
 
-Translating Business Requirements
+- Translating Business Requirements
+- Cross-Functional Collaboration
 
-Cross-Functional Collaboration
-
-## Translating Business Requirements: 
+## Translating Business Requirements
 
 Business leaders care about  Risk, Compliance, and Continuity . You translate those into:
 
@@ -34,7 +26,7 @@ Architectural Response:  Design a  Conditional Access  framework that requires P
 
 ## Cross-Functional Collaboration
 
-You serve as the "Security Diplomat" across these key teams: 
+You serve as the "Security Diplomat" across these key teams:
 
 Engineering/DevOps:  Integrating  Defender for DevOps  into CI/CD pipelines to catch secrets in code before they are pushed to production.
 
@@ -47,7 +39,7 @@ IT Operations:  Ensuring that security agents (like Defender for Endpoint) don't
 This role need to demonstrate "Expert" level knowledge in one area while maintaining a "Professional" level across the rest.
 
 | Focus Area | Architectural Responsibility |
-|----|----|
+| ---- | ---- |
 | Identity & Access | Designing a distributed identity model (B2B/B2C) and securing privileged accounts via PIM/PAM. |
 | Security Operations | Designing a  Microsoft Sentinel  workspace that ingests high-value logs while optimizing for cost and "time-to-remediate." |
 | Platform Protection | Architecting  Azure Landing Zones  with built-in guardrails (Azure Policy) to ensure every new resource is "secure by design." |
@@ -104,9 +96,9 @@ Phase C: Automation & Orchestration (SOAR)
 
 ## Phase A: The Unified Data Lake
 
-Centralize with Strategy : 
+Centralize with Strategy :
 
-Do not ingest everything into Sentinel. 
+Do not ingest everything into Sentinel.
 
 Use the "Telemetry-First" approach:
 
@@ -147,7 +139,7 @@ Data Governance with Microsoft Purview
 ## The Unified Architecture Map
 
 | Feature | Role in Architecture | Key Benefit |
-|----|----|----|
+| ---- | ---- | ---- |
 | Microsoft Sentinel | SIEM / SOAR | Cross-platform visibility and long-term retention. |
 | Microsoft Defender | XDR | Deep, specialized protection for specific workloads. |
 | Unified Portal | Management Plane | A single incident queue for both SIEM and XDR signals. |
@@ -155,7 +147,7 @@ Data Governance with Microsoft Purview
 
 Architectural Recommendation:
 
-For a modern enterprise, you should design a "Hub and Spoke" logging model. The "Hub" is your Sentinel workspace in the Defender portal, and the "Spokes" are your various cloud and on-premise assets. 
+For a modern enterprise, you should design a "Hub and Spoke" logging model. The "Hub" is your Sentinel workspace in the Defender portal, and the "Spokes" are your various cloud and on-premise assets.
 
 Ensure you are using Unified RBAC (Role-Based Access Control) so that identity, security, and compliance teams only see the data relevant to their roles.
 
@@ -180,7 +172,7 @@ Microsoft Cloud Security Benchmark : Provides the specific technical "checklist"
 As an architect, you design "Policy Engines" (like Conditional Access) that ingest signals from these six areas to make a real-time decision:  Allow, Block, or Challenge (MFA).
 
 | Pillar | Definition | Architectural Focus & Capabilities |
-|----|----|----|
+| ---- | ---- | ---- |
 | 1. Identities | Represent people, services, or IoT devices; they serve as the  primary perimeter . | Strong authentication (passwordless/MFA), identity protection (detecting leaked credentials), and governing the access lifecycle. |
 | 2. Endpoints | Diverse devices including IoT, smartphones, and BYOD laptops where data flows after identity verification. | Monitoring device health and compliance; denying access to "jailbroken" or unpatched devices regardless of user identity. |
 | 3. Applications | On-premises, Azure, or third-party SaaS (e.g., Salesforce) apps and APIs used to consume data. | Discovering "Shadow IT," ensuring appropriate in-app permissions, and monitoring for anomalous behavior like massive data downloads. |
@@ -194,32 +186,23 @@ Never trust, always verify : No implicit trust for users, devices, or applicatio
 
 Pillars of Zero Trust
 
-<div class="smartart process4" layout="process4">
-
-**Use least privileged access  (Restrict access with)**
-
-- Risk‑based adaptive policies
-- Just‑In‑Time (JIT) access
-- Just‑Enough‑Access (JEA)
-- Data protection
-
-**Verify explicitly  ( Authenticate and authorize every request using)**
-
-- Data classification
-- Anomalies
-- Service/workload
-- Device health
-- Location
-- User identity
-
-**Assume breach  (Limit damage by)**
-
-- Minimizing blast radius
-- Analytics for visibility & detection
-- End‑to‑end encryption
-- Segmenting access
-
-</div>
+1. **Use least privileged access  (Restrict access with)**
+    - Risk‑based adaptive policies
+    - Just‑In‑Time (JIT) access
+    - Just‑Enough‑Access (JEA)
+    - Data protection
+2. **Verify explicitly  ( Authenticate and authorize every request using)**
+    - Data classification
+    - Anomalies
+    - Service/workload
+    - Device health
+    - Location
+    - User identity
+3. **Assume breach  (Limit damage by)**
+    - Minimizing blast radius
+    - Analytics for visibility & detection
+    - End‑to‑end encryption
+    - Segmenting access
 
 ## The "Architecture" Perspective: The Policy Engine
 
@@ -299,19 +282,13 @@ Align to Business Migration:  Infrastructure and development security should be 
 
 ## Zero trust implementation steps
 
-Implementing Zero Trust is not a single configuration but a strategy deployed across seven technology pillars. 
-
-Identify integration points:  Map IT components and interactions (use frameworks like MCRA).
-
-Align security with business goals : Ensure protection supports organizational objectives.
-
-Translate requirements into technical capabilities : Define services, products, and processes.
-
-Design for resilience : Build systems that withstand and recover from attacks.
-
-Address hybrid and multi‑tenant environments : Apply controls across cloud, on‑prem, and shared infrastructures.
-
-Implement traffic filtering and segmentation : Control flows and isolate sensitive resources.
+1. Implementing Zero Trust is not a single configuration but a strategy deployed across seven technology pillars.
+2. Identify integration points:  Map IT components and interactions (use frameworks like MCRA).
+3. Align security with business goals : Ensure protection supports organizational objectives.
+4. Translate requirements into technical capabilities : Define services, products, and processes.
+5. Design for resilience : Build systems that withstand and recover from attacks.
+6. Address hybrid and multi‑tenant environments : Apply controls across cloud, on‑prem, and shared infrastructures.
+7. Implement traffic filtering and segmentation : Control flows and isolate sensitive resources.
 
 ## Zero trust technology pillars
 
@@ -321,12 +298,8 @@ The 7 Zero Trust Technology Pillars
 
 Microsoft defines seven foundational elements that must work together to provide end-to-end security.
 
-## Zero trust technology pillars
-
-Microsoft defines seven foundational elements that must work together to provide end-to-end security.
-
 | Pillar | Role in Zero Trust |
-|----|----|
+| ---- | ---- |
 | Identities | The primary control plane. Verify everyone (people, services, or IoT) with strong authentication and least-privilege. |
 | Endpoints | Monitor and enforce device health and compliance before granting access to data. |
 | Data | The ultimate goal is to protect data. Classify, label, and encrypt it, even when it leaves controlled environments. |
@@ -388,7 +361,7 @@ Integrate Threat Signals:  Connect signals from  Microsoft Defender for Identity
 ## Key capabilities Architect to look
 
 | Capability | Zero Trust Principle | Architectural Implementation |
-|----|----|----|
+| ---- | ---- | ---- |
 | Passwordless/MFA | Verify Explicitly | Enforce FIDO2 or Windows Hello to eliminate password-based attacks. |
 | PIM (Privileged Identity Management) | Least Privilege | Grant admin rights "Just-In-Time" for a limited window instead of permanent access. |
 | Conditional Access | Verify Explicitly | Block legacy authentication and require compliant devices for sensitive apps. |
