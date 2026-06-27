@@ -59,60 +59,41 @@ Well-Architected Framework (WAF):  The Security Pillar guidelines for building r
 ## Core Pillars of the Microsoft Cybersecurity Architecture
 
 The Zero Trust Foundation
-
 Strategic Domain Design
-
 Governance, Risk, and Compliance (GRC)
 
 ## The " Architect " Mindset: From Strategy to Capability
 
 When you translate a strategy, you aren't just deploying software; you are building a  Security Posture . This means:
-
 Continuous Assessment : Using tools like Secure Score to measure and prioritize improvements.
-
 Rationalization : Looking at an organization's existing tools and deciding what to keep, what to retire, and how to integrate them to reduce "swivel-chair" security for analysts.
-
 Resilience : Designing systems that can not only prevent attacks but also recover quickly through automated orchestration and response.
 
 ## Design Security Operations and Compliance through Microsoft Defender and Sentinel
 
 Design the Security Operations (SecOps) Strategy
-
 Design the Compliance Strategy
-
 The Unified Architecture Map
-
 Architectural Recommendation
 
 ## Design the Security Operations (SecOps) Strategy
 
 The goal is to move from reactive alerting to proactive threat hunting and automated response.
-
-Phase A: The Unified Data Lake
-
-Phase B: Extended Detection and Response (XDR)
-
-Phase C: Automation & Orchestration (SOAR)
+    - Phase A: The Unified Data Lake
+    - Phase B: Extended Detection and Response (XDR)
+    - Phase C: Automation & Orchestration (SOAR)
 
 ## Phase A: The Unified Data Lake
 
-Centralize with Strategy :
-
-Do not ingest everything into Sentinel.
-
-Use the "Telemetry-First" approach:
-
-High-Value Logs : (Entra ID, Defender Alerts, Office 365) go to Sentinel for correlation.
-
-Verbose/Compliance Logs : (Firewall traffic, DNS) go to Azure Data Explorer (ADX) or a basic Log Analytics tier to save costs.
-
-Workspace Architecture : Use a single primary Sentinel workspace whenever possible to enable the best AI correlation and a unified incident queue.
+- Centralize with Strategy : Do not ingest everything into Sentinel.
+- Use the "Telemetry-First" approach: High-Value Logs : (Entra ID, Defender Alerts, Office 365) go to Sentinel for correlation.
+- Verbose/Compliance Logs : (Firewall traffic, DNS) go to Azure Data Explorer (ADX) or a basic Log Analytics tier to save costs.
+- Workspace Architecture : Use a single primary Sentinel workspace whenever possible to enable the best AI correlation and a unified incident queue.
 
 ## Phase B: Extended Detection and Response (XDR)
 
-Microsoft Defender XDR:  Implement the full suite (Endpoint, Identity, Office 365, Cloud Apps). XDR provides the "pre-correlated" incidents.
-
-Automatic Attack Disruption:  Enable this feature in the Defender portal. It uses high-fidelity signals to automatically contain compromised entities (like disabling a user account or isolating a device) in real-time.
+- Microsoft Defender XDR:  Implement the full suite (Endpoint, Identity, Office 365, Cloud Apps). XDR provides the "pre-correlated" incidents.
+- Automatic Attack Disruption:  Enable this feature in the Defender portal. It uses high-fidelity signals to automatically contain compromised entities (like disabling a user account or isolating a device) in real-time.
 
 ## Phase C: Automation & Orchestration (SOAR)
 
