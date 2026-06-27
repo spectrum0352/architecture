@@ -80,21 +80,28 @@ Phase 5 Decommissioning Month 7
 
 ## 6. Crypto Agility
 
-6.1 Definition
+### 6.1 Definition
+
 Crypto agility is the ability of systems to quickly switch cryptographic algorithms, protocols, and keys without significant redesign or downtime.
-6.2 Key Principles
+
+### 6.2 Key Principles
+
 • Algorithm abstraction (no hardcoding)
 • Centralized cryptographic configuration
 • Use of standard protocols (TLS 1.2/1.3)
 • Modular architecture
 • Backward compatibility where necessary
-6.3 Implementation Controls
+
+### 6.3 Implementation Controls
+
 • Use configurable cipher suites
 • Externalize crypto policies (e.g., via config files or KMS)
 • Support multiple algorithms simultaneously
 • Maintain versioned cryptographic configurations
 • Enable feature flags for crypto switching
-6.4 Technology Enablers
+
+### 6.4 Technology Enablers
+
 • Key Management Systems (KMS)
 • Hardware Security Modules (HSM)
 • API-driven cryptographic services
@@ -102,13 +109,15 @@ Crypto agility is the ability of systems to quickly switch cryptographic algorit
 
 ## 7. Migration Strategies
 
-7.1 Migration Triggers
+### 7.1 Migration Triggers
+
 • Algorithm deprecation
 • Regulatory requirements
 • Security incidents
 • Technology upgrades
 
-7.2 Migration Approaches
+### 7.2 Migration Approaches
+
 7.2.1 In-Place Migration
 • Replace algorithms within existing systems
 • Re-encrypt data using new algorithms
@@ -130,7 +139,7 @@ Cons: Increased complexity
 o TLS 1.0/1.1 → TLS 1.2/1.3
 • Update endpoints and clients
 
-7.3 Migration Workflow
+### 7.3 Migration Workflow
 
 1. Inventory cryptographic assets
 2. Identify dependencies
@@ -140,7 +149,8 @@ o TLS 1.0/1.1 → TLS 1.2/1.3
 6. Execute migration in phases
 7. Validate and monitor
 
-7.4 Key Migration Considerations
+### 7.4 Key Migration Considerations
+
 • Data integrity during re-encryption
 • Backward compatibility
 • Performance impact
