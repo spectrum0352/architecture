@@ -16,42 +16,39 @@ These standards apply to:
 
 ### 3.1 Data at Rest
 
-- Sensitive data must be encrypted using approved algorithms:
-    - AES-256 (preferred)
-    - AES-128 (minimum acceptable where performance constraints exist)
+Sensitive data must be encrypted using approved algorithms
 
-- Encryption must be applied at:
+- AES-256 (preferred)
+- AES-128 (minimum acceptable where performance constraints exist)
 
-        - Disk level (Full Disk Encryption)
-        - Database level (Transparent Data Encryption)
-        - File/object storage level (e.g., cloud storage encryption)
+Encryption must be applied at:
+
+- Disk level (Full Disk Encryption)
+- Database level (Transparent Data Encryption)
+- File/object storage level (e.g., cloud storage encryption)
 
 Implementation Guidelines:
-• Use managed encryption services (e.g., cloud KMS) wherever possible
-• Separate encryption keys from encrypted data
-• Avoid storing sensitive data in plaintext, including logs and backups
-________________________________________
+
+- Use managed encryption services (e.g., cloud KMS) wherever possible
+- Separate encryption keys from encrypted data
+- Avoid storing sensitive data in plaintext, including logs and backups
 
 ### 3.2 Data in Transit
 
-• All data in transit must be protected using:
-o TLS 1.2 (minimum)
-o TLS 1.3 (preferred)
+All data in transit must be protected using:
+
+- TLS 1.2 (minimum)
+- TLS 1.3 (preferred)
 
 Approved Configurations:
-• Strong cipher suites only (e.g., ECDHE with AES-GCM)
-• Disable:
-o SSL (all versions)
-o TLS 1.0 and 1.1
-o Weak ciphers (RC4, DES, 3DES)
+
+- Use Strong cipher suites only (e.g., ECDHE with AES-GCM)
+- Disable: SSL, TLS v1.0, TLS v1.1 and Weak ciphers such as RC4, DES, 3DES.
 
 Additional Requirements:
-• Enforce HTTPS for all web applications
-• Use secure protocols:
-o SFTP instead of FTP
-o SSH instead of Telnet
 
-________________________________________
+- Enforce HTTPS for all web applications
+- Use secure protocols such as SFTP instead of FTP and SSH instead of Telnet
 
 ### 3.3 Data in Use (Where Applicable)
 
