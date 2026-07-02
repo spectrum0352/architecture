@@ -17,24 +17,30 @@ ________________________________________
 
 The organization mandates the use of strong, industry-approved cryptographic mechanisms to protect data at rest, in transit, and during processing where applicable. Only approved algorithms, key management practices, and cryptographic libraries shall be used.
 
-________________________________________
-
 ## 4. Approved Cryptographic Algorithms
 
-4.1 Symmetric Encryption
-• AES (Advanced Encryption Standard)
+### 4.1 Symmetric Encryption
+
+AES (Advanced Encryption Standard)
 o Minimum: AES-128
 o Recommended: AES-256
-4.2 Asymmetric Encryption
+
+### 4.2 Asymmetric Encryption
+
 • RSA
 o Minimum key length: 2048 bits
 o Recommended: 3072 bits or higher
+
 • Elliptic Curve Cryptography (ECC)
 o Approved curves: secp256r1, secp384r1
-4.3 Hashing Algorithms
+
+### 4.3 Hashing Algorithms
+
 • SHA-256 or higher (SHA-384, SHA-512)
 • SHA-1 and MD5 are strictly prohibited
-4.4 Key Exchange & Digital Signatures
+
+### 4.4 Key Exchange & Digital Signatures
+
 • ECDHE (Elliptic Curve Diffie-Hellman Ephemeral)
 • RSA-PSS for signatures
 • Ed25519 (where supported)
@@ -50,20 +56,21 @@ Only vetted and regularly updated cryptographic libraries are permitted, includi
 • Java Cryptography Architecture (JCA/JCE)
 • Microsoft Cryptography APIs
 Use of custom or proprietary cryptographic implementations is strictly prohibited unless formally reviewed and approved by the security team.
-________________________________________
 
 ## 7. Key Management Requirements
 
-• Cryptographic keys must be generated using secure random number generators.
-• Keys must be stored securely using:
-o Hardware Security Modules (HSMs), or
-o Secure key vaults (e.g., cloud KMS)
-• Key rotation must occur:
-o At least annually, or
-o Immediately upon suspected compromise
+Cryptographic keys must be generated using secure random number generators. Keys must be stored securely using:
+
+- Hardware Security Modules (HSMs), or
+- Secure key vaults (e.g., cloud KMS)
+
+Key rotation must occur:
+
+- At least annually, or
+- Immediately upon suspected compromise
+
 • Keys must never be hardcoded in source code or stored in plaintext.
 • Access to keys must follow the principle of least privilege.
-________________________________________
 
 ## 8. Data Classification and Encryption Requirements
 
@@ -80,7 +87,6 @@ ________________________________________
 ### 8.3 Data in Use
 
 • Sensitive operations should use secure enclaves or memory protection where feasible.
-________________________________________
 
 ## 9. Regulatory and Compliance Requirements
 
