@@ -1,5 +1,5 @@
 
-# Cryptography Lifecycle Management
+# Cryptography Management
 
 ## 1. Purpose
 
