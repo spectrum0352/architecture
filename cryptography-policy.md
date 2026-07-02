@@ -97,8 +97,6 @@ The organization must ensure compliance with applicable regulations, including b
 • Local data protection laws and industry-specific standards
 Cryptographic controls must align with regulatory expectations for data protection and privacy.
 
-________________________________________
-
 ## 10. Prohibited Practices
 
 • Use of deprecated or weak algorithms (e.g., DES, 3DES, RC4, MD5, SHA-1)
