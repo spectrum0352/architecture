@@ -41,8 +41,6 @@ o Approved curves: secp256r1, secp384r1
 
 ## 5. Minimum Key Length Requirements
 
-<img width="260" height="82" alt="image" src="https://github.com/user-attachments/assets/72160451-e4f7-49fa-ba13-2e2fa314ba35" />
-
 ## 6. Approved Cryptographic Libraries and Tools
 
 Only vetted and regularly updated cryptographic libraries are permitted, including:
@@ -68,8 +66,6 @@ o Immediately upon suspected compromise
 ________________________________________
 
 ## 8. Data Classification and Encryption Requirements
-
-<img width="381" height="93" alt="image" src="https://github.com/user-attachments/assets/bc62fc25-584f-4446-b410-0d3069947d1e" />
 
 ### 8.1 Data at Rest
 
